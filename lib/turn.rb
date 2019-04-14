@@ -37,8 +37,9 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index, "X")
     display_board(board)
-  end
-  while !valid_move?(board, index)
-    turn(board)
+  else
+    until valid_move?(board, index)
+      turn(board)
+    end
   end
 end
