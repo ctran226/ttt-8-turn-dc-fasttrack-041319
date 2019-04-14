@@ -24,7 +24,6 @@ end
 
 def move(array, index, character="X")
   array[index] = character
-  return array
 end
 
 def input_to_index(input)
