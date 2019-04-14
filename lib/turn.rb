@@ -27,10 +27,14 @@ def move(array, index, character="X")
   return array
 end
 
+def input_to_index(input)
+  input.to_i - 1;
+end
+
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip.chomp
-  index = input.to_i - 1;
+  index = input_to_index(input)
   #if valid_move?(board, index)
   #  move(board, index, "X")
   #else 
