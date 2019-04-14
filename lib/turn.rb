@@ -31,7 +31,12 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip.chomp
   index = input.to_i - 1;
-  until valid_move?(board, index)
+  if valid_move?(board, index)
+    move(board, index, "X")
+  else 
     turn(board)
-  end
+  end  
+  #until valid_move?(board, index)
+  #  turn(board)
+  #end
 end
